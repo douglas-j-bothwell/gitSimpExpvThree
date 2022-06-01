@@ -1,0 +1,34 @@
+pipeline:
+    name: simplePipelineThree
+    identifier: simplePipelineThree
+    projectIdentifier: dbothwellSandbox
+    orgIdentifier: default
+    tags: {}
+    properties:
+        ci:
+            codebase:
+                connectorRef: dbothwelllgithubpat
+                repoName: gitSimpExpvThree
+                build: <+input>
+    stages:
+        - stage:
+              name: Build
+              identifier: Build
+              type: CI
+              spec:
+                  cloneCodebase: true
+                  infrastructure:
+                      type: KubernetesHosted
+                      spec:
+                          identifier: k8s-hosted-infra
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: echo hello-world
+                                identifier: echo_helloworld
+                                spec:
+                                    connectorRef: dbothwelldockerhub
+                                    image: alpine/latest
+                                    shell: Sh
+                                    command: echo "hello world"
