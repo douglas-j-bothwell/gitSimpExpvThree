@@ -18,9 +18,12 @@ pipeline:
               spec:
                   cloneCodebase: true
                   infrastructure:
-                      type: KubernetesHosted
+                      type: KubernetesDirect
                       spec:
-                          identifier: k8s-hosted-infra
+                          connectorRef: dbothwellk8s
+                          namespace: "harness-delegate-ng "
+                          automountServiceAccountToken: true
+                          nodeSelector: {}
                   execution:
                       steps:
                           - step:
