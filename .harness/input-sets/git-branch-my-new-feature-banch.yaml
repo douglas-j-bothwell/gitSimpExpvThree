@@ -1,0 +1,14 @@
+inputSet:
+  identifier: "gitbranchmynewfeaturebanch"
+  name: "git-branch-my-new-feature-banch"
+  orgIdentifier: "default"
+  projectIdentifier: "dougproject"
+  pipeline:
+    identifier: "gitSimpExpvThree"
+    properties:
+      ci:
+        codebase:
+          build:
+            type: "branch"
+            spec:
+              branch: "my-new-feature-branch"
