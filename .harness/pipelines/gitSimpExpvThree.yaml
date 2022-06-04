@@ -1,27 +1,29 @@
 pipeline:
-    name: simplePipelineThree
-    identifier: simplePipelineThree
-    projectIdentifier: dbothwellSandbox
+    name: gitSimpExpvThree
+    identifier: gitSimpExpvThree
+    projectIdentifier: dougproject
     orgIdentifier: default
+    storeType: REMOTE
+    remoteType: create
     tags: {}
     properties:
         ci:
             codebase:
-                connectorRef: dbothwelllgithubpat
+                connectorRef: douglasjbothwellgithub
                 repoName: gitSimpExpvThree
                 build: <+input>
     stages:
         - stage:
-              name: Build
-              identifier: Build
+              name: build
+              identifier: build
               type: CI
               spec:
                   cloneCodebase: true
                   infrastructure:
                       type: KubernetesDirect
                       spec:
-                          connectorRef: dbothwellk8s
-                          namespace: "harness-delegate-ng "
+                          connectorRef: docsgkedbothwellciquickstart
+                          namespace: harness-delegate-ng
                           automountServiceAccountToken: true
                           nodeSelector: {}
                   execution:
@@ -34,4 +36,4 @@ pipeline:
                                     connectorRef: dbothwelldockerhub
                                     image: alpine/latest
                                     shell: Sh
-                                    command: echo "hello world from my-feature-branch"
+                                    command: echo "hello world in my-feature-branch"
