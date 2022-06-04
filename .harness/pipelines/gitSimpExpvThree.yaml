@@ -36,4 +36,4 @@ pipeline:
                                     connectorRef: dbothwelldockerhub
                                     image: alpine/latest
                                     shell: Sh
-                                    command: echo "hello world"
+                                    command: echo "hello world in my-feature-branch"
