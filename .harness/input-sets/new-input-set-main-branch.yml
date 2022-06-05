@@ -1,0 +1,14 @@
+inputSet:
+  identifier: "newinputsetmainbranch"
+  name: "new-input-set-main-branch"
+  orgIdentifier: "default"
+  projectIdentifier: "dougproject"
+  pipeline:
+    identifier: "gitSimpExpvThree"
+    properties:
+      ci:
+        codebase:
+          build:
+            type: "branch"
+            spec:
+              branch: "<trigger.branch>"
