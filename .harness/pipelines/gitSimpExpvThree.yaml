@@ -37,3 +37,12 @@ pipeline:
                                     image: alpine/latest
                                     shell: Sh
                                     command: echo "hello world in my-feature-branch"
+                          - step:
+                                type: BuildAndPushDockerRegistry
+                                name: pushToDocker
+                                identifier: pushToDocker
+                                spec:
+                                    connectorRef: dbothwelldockerhub
+                                    repo: dbothwell/gitsimpexpvthree
+                                    tags:
+                                        - latest-my-new-feature-branch
