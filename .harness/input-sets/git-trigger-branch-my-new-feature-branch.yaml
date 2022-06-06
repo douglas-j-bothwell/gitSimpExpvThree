@@ -1,0 +1,14 @@
+inputSet:
+  identifier: "gittriggerbranchmynewfeaturebranch"
+  name: "git-trigger-branch-my-new-feature-branch"
+  orgIdentifier: "default"
+  projectIdentifier: "dougproject"
+  pipeline:
+    identifier: "gitSimpExpvThree"
+    properties:
+      ci:
+        codebase:
+          build:
+            type: "branch"
+            spec:
+              branch: "<+trigger.branch>"

@@ -1,0 +1,9 @@
+overlayInputSet:
+    name: myNewFeatureBranchOverlaySet
+    identifier: myNewFeatureBranchOverlaySet
+    orgIdentifier: default
+    projectIdentifier: dougproject
+    pipelineIdentifier: gitSimpExpvThree
+    inputSetReferences:
+        - gittriggerbranchmynewfeaturebranch
+    tags: {}
