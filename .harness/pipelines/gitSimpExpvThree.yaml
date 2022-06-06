@@ -22,8 +22,8 @@ pipeline:
                   infrastructure:
                       type: KubernetesDirect
                       spec:
-                          connectorRef: docsgkedbothwellciquickstart
-                          namespace: harness-delegate-ng
+                          connectorRef: account.CItestK8sConnectorU4hsfzj5Q7
+                          namespace: harness-qa-delegate
                           automountServiceAccountToken: true
                           nodeSelector: {}
                   execution:
